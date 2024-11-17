@@ -1,15 +1,13 @@
-import { Route, Routes } from "react-router-dom";
 import TopHeader from "../../components/sandbox/TopHeader";
-import Content from "./Content";
 
 function NewsSandBox() {
     return(
         <div>
             <TopHeader></TopHeader>
-            <Content />
+            {/* <Content />
             <Routes>
                 <Route path="home" element={<Content />} />
-            </Routes>
+            </Routes> */}
         </div>
     )
 }
