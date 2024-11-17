@@ -11,7 +11,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
@@ -60,7 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function NewsSandBox() {
+function TopHeader() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -99,7 +98,7 @@ function NewsSandBox() {
               textDecoration: 'none',
             }}
           >
-            BANGJUN
+            LOGO
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -136,7 +135,6 @@ function NewsSandBox() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -178,7 +176,7 @@ function NewsSandBox() {
           <Box sx={{ flexGrow: 0, marginLeft: "10px" }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/Users/bangjun/IdeaProjects/my-app/src/2.jpg" />
+                <Avatar alt="Remy Sharp" src="/images/2.jpeg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -209,4 +207,4 @@ function NewsSandBox() {
     </AppBar>
   );
 }
-export default NewsSandBox;
+export default TopHeader;
