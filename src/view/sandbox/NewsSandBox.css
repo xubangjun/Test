@@ -1,0 +1,22 @@
+.news-sandbox {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height for the container */
+  }
+  
+  .content-area {
+    flex: 1; /* Allow content to fill the remaining space */
+    margin-top: 64px; /* Match the height of TopHeader */
+    overflow-y: auto; /* Allow scrolling for overflow content */
+    padding: 16px; /* Optional padding for content */
+    background-color: #f5f5f5; /* Optional background color */
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px; /* Define height of TopHeader */
+    z-index: 1000; /* Ensure it stays above content */
+  }
