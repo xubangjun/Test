@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Spot', 'music', 'about me'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -60,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function ResponsiveAppBar() {
+function NewsSandBox() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -99,7 +99,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BANGJUN
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -178,7 +178,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0, marginLeft: "10px" }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="/Users/bangjun/IdeaProjects/my-app/src/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -209,4 +209,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default NewsSandBox;
