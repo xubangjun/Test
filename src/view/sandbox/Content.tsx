@@ -4,8 +4,7 @@ function Content() {
   return(
       <Box>
         <Box>
-          {/* <img src="images/2.jpeg" alt="son" style={{ width: '300px', height: 'auto' }} /> */}
-          images
+          <img src="images/2.jpeg" alt="son" style={{ width: '300px', height: 'auto' }} />
         </Box>
         <Box>
           123
