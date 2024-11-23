@@ -141,12 +141,35 @@ body {
 
 /* Main Content */
 .main-content {
+  background-image: url('../../../public/images/bg.jpg'); /* Relative to the CSS file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin-left: 0;
+  height: 100%;
   padding: 60px 20px 20px; /* Padding for the app bar */
   transition: margin-left 0.3s ease;
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Black overlay with 20% opacity */
+  z-index: 1; /* Ensure the overlay sits above the background but below the content */
 }
 
 .main-content.shifted {
   margin-left: 240px; /* Shifts content when drawer is open */
+}
+
+.app {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
 }
 

@@ -7,9 +7,10 @@ interface DrawerProps {
 }
 const Home: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
   return (
-    <div className={`main-content ${open ? 'shifted' : ''}`}>
+    <div className={`main-content1 ${open ? 'shifted' : ''}`}>
       <Content></Content>
   </div>
+
   );
 };
 export default Home
