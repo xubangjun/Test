@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './TopHeader.css'; // CSS file for styling
-import Content from '../../view/sandbox/Content';
-const TopHeader = () => {
-  const [open, setOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setOpen(!open);
-  };
+import HomeIcon from '@mui/icons-material/Home';
+interface DrawerProps {
+  open: boolean;
+  toggleDrawer: () => void;
+}
+const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
 
   return (
     <div className="app">
@@ -21,13 +20,11 @@ const TopHeader = () => {
       {/* Sidebar Drawer */}
       <div className={`drawer ${open ? 'open' : ''}`}>
         <div className="drawer-header">
-          <button className="close-button" onClick={toggleDrawer}>
-            &#10005; {/* Close Icon */}
-          </button>
         </div>
         <ul className="drawer-list">
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((item, index) => (
+          {['Home', 'Starred', 'Send email', 'Drafts'].map((item, index) => (
             <li key={index} className="drawer-item">
+              {index === 0 ?<div style={{ marginRight: '15px' }}><HomeIcon/></div>: null}
               {item}
             </li>
           ))}
@@ -36,7 +33,6 @@ const TopHeader = () => {
 
       {/* Main Content Area */}
       <div className={`main-content ${open ? 'shifted' : ''}`}>
-        <Content />
         <p>This is some sample content.</p>
       </div>
     </div>

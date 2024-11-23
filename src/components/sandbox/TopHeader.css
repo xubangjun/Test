@@ -8,20 +8,44 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
-
+@keyframes creativeGradient {
+  0% {
+    background-position: 0% 50%;
+    background-color: #3f51b5;
+  }
+  25% {
+    background-position: 50% 50%;
+    background-color: #2196f3;
+  }
+  50% {
+    background-position: 100% 50%;
+    background-color: #4caf50;
+  }
+  75% {
+    background-position: 50% 100%;
+    background-color: #ff9800;
+  }
+  100% {
+    background-position: 0% 50%;
+    background-color: #3f51b5;
+  }
+}
 /* App Bar */
 .app-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #3f51b5;
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0, #7986cb, #3f51b5);
   color: white;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  background: linear-gradient(135deg, #3f51b5, #2196f3, #4caf50, #ff9800, #3f51b5);
+  background-size: 400% 400%; /* 扩大背景以实现更大的动画效果 */
+  animation: creativeGradient 100s infinite ease-in-out;
 }
 
 .menu-button {
@@ -44,8 +68,8 @@ body {
   left: -240px;
   width: 240px;
   height: 100%;
-  background-color: #263238;
-  color: white;
+  background-color: white;
+  color: black;
   transition: left 0.3s ease;
   padding-top: 50px; /* For spacing below the app bar */
 }
@@ -74,13 +98,45 @@ body {
 
 .drawer-item {
   padding: 15px;
-  border-bottom: 1px solid #37474f;
   text-align: center;
   cursor: pointer;
+  font-weight: bold;
+  left: 5%; /* 左侧留出 5% 空间 */
+  width: 95%; /* 线条占据宽度的 90% */
+  overflow: hidden; /* 防止伪元素溢出 */
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+.drawer-item:active {
+  background-color: #5c6bc0; /* 点击时轻微背景变化 */
+  color: white; /* 点击时文字颜色变化 */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* 点击时增加轻微的按压阴影 */
+}
+
+/* 点击波纹效果伪元素 */
+.drawer-item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* 波纹颜色 */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.drawer-item:active::after {
+  width: 50%;
+  height: 50%;
+  opacity: 1; /* 波纹逐渐变大并显示 */
 }
 
 .drawer-item:hover {
-  background-color: #37474f;
+  background-color: lightgray;
 }
 
 /* Main Content */
@@ -93,3 +149,4 @@ body {
 .main-content.shifted {
   margin-left: 240px; /* Shifts content when drawer is open */
 }
+
