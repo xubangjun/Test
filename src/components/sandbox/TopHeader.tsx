@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TopHeader.css'; // CSS file for styling
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 interface DrawerProps {
   open: boolean;
   toggleDrawer: () => void;
@@ -23,7 +25,7 @@ const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
         <ul className="drawer-list">
           {['Home', 'Starred', 'Send email', 'Drafts'].map((item, index) => (
             <li key={index} className="drawer-item">
-              {index === 0 ?<div style={{ marginRight: '15px' }}>Home</div>: null}
+              {index === 0 ?<div style={{ marginRight: '15px' }}> <FontAwesomeIcon icon={faHome} /></div>: null}
               {item}
             </li>
           ))}
