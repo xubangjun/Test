@@ -15,7 +15,7 @@ const TopHeader = () => {
         <button className="menu-button" onClick={toggleDrawer}>
           &#9776; {/* Hamburger Menu */}
         </button>
-        <h1>Mini Drawer</h1>
+        <h1>BANGJUN.COM</h1>
       </div>
 
       {/* Sidebar Drawer */}
