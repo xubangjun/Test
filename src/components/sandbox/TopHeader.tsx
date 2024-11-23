@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './TopHeader.css'; // CSS file for styling
-import HomeIcon from '@mui/icons-material/Home';
 interface DrawerProps {
   open: boolean;
   toggleDrawer: () => void;
@@ -24,7 +23,7 @@ const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
         <ul className="drawer-list">
           {['Home', 'Starred', 'Send email', 'Drafts'].map((item, index) => (
             <li key={index} className="drawer-item">
-              {index === 0 ?<div style={{ marginRight: '15px' }}><HomeIcon/></div>: null}
+              {index === 0 ?<div style={{ marginRight: '15px' }}>Home</div>: null}
               {item}
             </li>
           ))}
