@@ -1,12 +1,32 @@
 import React from 'react';
 import './TopHeader.css'; // CSS file for styling
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { IoHomeOutline } from "react-icons/io5";
+import { RiRobot2Fill } from "react-icons/ri";
+import { MdOutlineMarkEmailRead } from "react-icons/md";
+import { PiRankingFill } from "react-icons/pi";
+import { Navigate, useNavigate } from 'react-router-dom';
 interface DrawerProps {
   open: boolean;
   toggleDrawer: () => void;
 }
+
+const items = [
+  { name: 'Home', icon: <IoHomeOutline />, path: '/home' },
+  { name: 'Robot', icon: <RiRobot2Fill />, path: '/robot' },
+  { name: 'Email', icon: <MdOutlineMarkEmailRead />, path: '/email' },
+  { name: 'Rank', icon: <PiRankingFill/>, path: '/drafts' },
+];
 const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
+  const navigate = useNavigate();
+
+  const handleItemClick = (index: number) => {
+    if (index === 0) {
+      navigate("/home");
+    }
+    if (index !== 0) {
+      navigate("/");
+    }
+  };
 
   return (
     <div className="app">
@@ -23,12 +43,14 @@ const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
         <div className="drawer-header">
         </div>
         <ul className="drawer-list">
-          {['Home', 'Starred', 'Send email', 'Drafts'].map((item, index) => (
-            <li key={index} className="drawer-item">
-              {index === 0 ?<div style={{ marginRight: '15px' }}> <FontAwesomeIcon icon={faHome} /></div>: null}
-              {item}
+          {items.map((item, index) => (
+            <li key={index} className="drawer-item" onClick={() => handleItemClick(index)}>
+                <div className="icon">{item.icon}</div>
+                {index === 1 && <div className="divider"></div>}
+                {item.name}
             </li>
           ))}
+          
         </ul>
       </div>
 

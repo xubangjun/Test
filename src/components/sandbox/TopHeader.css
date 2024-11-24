@@ -101,12 +101,15 @@ body {
   text-align: center;
   cursor: pointer;
   font-weight: bold;
-  left: 5%; /* 左侧留出 5% 空间 */
-  width: 95%; /* 线条占据宽度的 90% */
   overflow: hidden; /* 防止伪元素溢出 */
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   align-items: center;
+}
+.drawer-item .icon {
+  font-size: 20px;
+  height: 21px;
+  margin-right: 15px;
 }
 .drawer-item:active {
   background-color: #5c6bc0; /* 点击时轻微背景变化 */
@@ -137,6 +140,7 @@ body {
 
 .drawer-item:hover {
   background-color: lightgray;
+  color: #3f51b5; /* 鼠标悬浮时的文字颜色变化 */
 }
 
 /* Main Content */
