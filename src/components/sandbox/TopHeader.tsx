@@ -1,20 +1,20 @@
 import React from 'react';
 import './TopHeader.css'; // CSS file for styling
-import { IoHomeOutline } from "react-icons/io5";
 import { RiRobot2Fill } from "react-icons/ri";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { PiRankingFill } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
+import { HomeOutlined } from '@ant-design/icons';
 interface DrawerProps {
   open: boolean;
   toggleDrawer: () => void;
 }
 
 const items = [
-  { name: 'Home', icon: <IoHomeOutline/>, path: '/home' },
-  { name: 'Robot', icon: <RiRobot2Fill/>, path: '/robot' },
-  { name: 'Email', icon: <MdOutlineMarkEmailRead/>, path: '/email' },
-  { name: 'Rank', icon: <PiRankingFill/>, path: '/drafts' },
+  { name: 'Home', icon: <HomeOutlined />, path: '/home' },
+  { name: 'Robot', icon: null, path: '/robot' },
+  { name: 'Email', icon: null, path: '/email' },
+  { name: 'Rank', icon: null, path: '/drafts' },
 ];
 const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
   const navigate = useNavigate();
