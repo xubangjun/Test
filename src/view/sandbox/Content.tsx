@@ -1,10 +1,15 @@
+
+import MyPie from "../../components/chart/MyPie";
+import MyPie2 from "../../components/chart/MyPie2";
 import "./Content.css";
+
 function Content() {
   return(
       <div>
         <div>
           <div className="head-box">
-          <img src="images/2.jpeg" alt="son" style={{ width: '300px', height: 'auto' }} />
+            <MyPie></MyPie>
+            <MyPie2></MyPie2>
           </div>
         </div>
         <div>
@@ -18,3 +23,4 @@ function Content() {
 }
 
 export default Content;
+
