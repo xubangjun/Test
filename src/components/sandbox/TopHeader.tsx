@@ -11,10 +11,10 @@ interface DrawerProps {
 }
 
 const items = [
-  { name: 'Home', icon: null, path: '/home' },
-  { name: 'Robot', icon: null, path: '/robot' },
-  { name: 'Email', icon: null, path: '/email' },
-  { name: 'Rank', icon: null, path: '/drafts' },
+  { name: 'Home', icon: <IoHomeOutline/>, path: '/home' },
+  { name: 'Robot', icon: <RiRobot2Fill/>, path: '/robot' },
+  { name: 'Email', icon: <MdOutlineMarkEmailRead/>, path: '/email' },
+  { name: 'Rank', icon: <PiRankingFill/>, path: '/drafts' },
 ];
 const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
   const navigate = useNavigate();
