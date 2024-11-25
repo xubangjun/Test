@@ -6,8 +6,8 @@ const IndexRouter: React.FC = () => {
     <HashRouter>
       <Routes>
         {/* Wrap all Route elements inside a Routes component */}
-        <Route path="/main*" element ={<NewsSandBox/>}/>
-                           {/* Optional: Handle unmatched routes */}
+        <Route path="/" element ={<NewsSandBox/>}/>
+          {/* Optional: Handle unmatched routes */}
         <Route path="*" element={<NewsSandBox />} />
       </Routes>
     </HashRouter>

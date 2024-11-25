@@ -1,6 +1,6 @@
 import "./styles.css";
 import React from "react";
-import { PieChart, Pie, Sector, Cell } from "recharts";
+import { PieChart, Pie, Cell } from "recharts";
 
 const data = [
   { name: "Group A", value: 400 },
@@ -10,7 +10,7 @@ const data = [
 ];
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
-export default function App() {
+export default function MyPie2() {
   return (
     <PieChart width={800} height={400}>
       <Pie
