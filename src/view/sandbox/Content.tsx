@@ -1,6 +1,4 @@
 
-import MyPie from "../../components/chart/MyPie";
-import MyPie2 from "../../components/chart/MyPie2";
 import "./Content.css";
 
 function Content() {
@@ -8,8 +6,6 @@ function Content() {
       <div>
         <div>
           <div className="head-box">
-            <MyPie></MyPie>
-            <MyPie2></MyPie2>
           </div>
         </div>
         <div>
