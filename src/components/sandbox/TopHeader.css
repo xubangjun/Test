@@ -180,3 +180,25 @@ body {
   flex-direction: column;
 }
 
+
+.icon {
+  margin-right: 10px;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.submenu-item {
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submenu-item:hover {
+  background-color: #e8e8e8;
+}
