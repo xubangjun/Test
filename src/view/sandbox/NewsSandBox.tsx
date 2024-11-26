@@ -3,6 +3,7 @@ import TopHeader from "../../components/sandbox/TopHeader";
 import "./NewsSandBox.css";
 import Home from "../../components/home/Home";
 import { useState } from "react";
+import Robots from "../../components/robots/Robots";
 function NewsSandBox() {
     const [open, setOpen] = useState<boolean>(false);
 
@@ -16,6 +17,8 @@ function NewsSandBox() {
 
             <Routes>
                 <Route path="/home" element={<Home open={open} toggleDrawer={toggleDrawer}/>} />
+
+                <Route path="/robots" element={<Robots open={open} toggleDrawer={toggleDrawer}/>} />
                  {/* Set default redirection */}
                 <Route path="/" element={<Navigate to="/main" replace />} />
             </Routes>

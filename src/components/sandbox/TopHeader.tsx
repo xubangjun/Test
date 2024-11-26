@@ -20,8 +20,8 @@ const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
     if (index === 0) {
       navigate("/home");
     }
-    if (index !== 0) {
-      navigate("/");
+    if (index === 1) {
+      navigate("/robots");
     }
   };
 
@@ -37,23 +37,15 @@ const TopHeader: React.FC<DrawerProps> = ({ open, toggleDrawer }) => {
 
       {/* Sidebar Drawer */}
       <div className={`drawer ${open ? 'open' : ''}`}>
-        <div className="drawer-header">
-        </div>
         <ul className="drawer-list">
           {items.map((item, index) => (
             <li key={index} className="drawer-item" onClick={() => handleItemClick(index)}>
                 <div className="icon">{item.icon}</div>
-                {index === 1 && <div className="divider"></div>}
                 {item.name}
             </li>
           ))}
           
         </ul>
-      </div>
-
-      {/* Main Content Area */}
-      <div className={`main-content ${open ? 'shifted' : ''}`}>
-        <p>This is some sample content.</p>
       </div>
     </div>
   );

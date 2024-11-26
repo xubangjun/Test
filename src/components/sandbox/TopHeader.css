@@ -76,6 +76,8 @@ body {
 
 .drawer.open {
   left: 0;
+  border-right: 1px solid #ddd; /* Light right border */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
 .drawer-header {
@@ -93,6 +95,7 @@ body {
 }
 
 .drawer-list {
+  margin-top: 5px;
   list-style: none;
 }
 
@@ -141,6 +144,7 @@ body {
 .drawer-item:hover {
   background-color: lightgray;
   color: #3f51b5; /* 鼠标悬浮时的文字颜色变化 */
+  border-bottom: 1px solid lightgray; /* 下划线效果 */
 }
 
 /* Main Content */
@@ -172,7 +176,6 @@ body {
 }
 
 .app {
-  height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
 }
